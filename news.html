@@ -39,7 +39,7 @@
     <h2 class="text-xl font-bold mb-2">Latest News</h2>
    <div id="previousResultsContainer" class="mt-6"></div>
 <script>
-  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTe0jfYrTl_cfqVt812QFYvCu2ZeZ9XXepyX-K3wchDf-GILqODcBHATiA0P5ROzKb3lPM4p3Maf4VX/pub?output=csv')
+  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQScNsYf2l6CR9uKK7gugeWwG4LVAao4DSkAnqPfbIKvQnKCmzn3rNMBIjcWYmpx6xyDyL8gnnWztQN/pub?output=csv')
     .then(response => response.text())
     .then(csv => {
       const rows = csv.split('\n').slice(1);
