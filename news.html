@@ -66,5 +66,31 @@
         document.getElementById('previousResultsContainer').innerHTML = html;
       });
   </script>
-</section></body>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTe0jfYrTl_cfqVt812QFYvCu2ZeZ9XXepyX-K3wchDf-GILqODcBHATiA0P5ROzKb3lPM4p3Maf4VX/pub?output=csv')
+      .then(response => response.text())
+      .then(csv => {
+        const rows = csv.split('\n').slice(1);
+        const today = new Date();
+        let html = '';
+        rows.forEach(row => {
+          const cols = row.split(',');
+          const matchDate = new Date(cols[0]);
+          if (matchDate < today) {
+            html += `
+              <article class="bg-white text-black p-4 rounded shadow-md my-4">
+                <h3 class="text-xl font-semibold text-yellow-600">${cols[0]}: ${cols[1]} ${cols[2]} vs ${cols[3]} ${cols[4]}</h3>
+                <p class="mt-2">In a thrilling contest between ${cols[1]} and ${cols[3]}, the final score ended ${cols[2]} - ${cols[4]}. Stay tuned for detailed match reports, highlights, and post-match reactions.</p>
+              </article>
+            `;
+          }
+        });
+        document.getElementById('previousResultsContainer').innerHTML = html;
+      });
+  });
+</script>
+
+</body>
 </html>
