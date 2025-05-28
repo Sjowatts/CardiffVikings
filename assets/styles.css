@@ -34,7 +34,7 @@ header .logo:hover {
 }
 
 header h1 {
-    color: #ffffff;
+    color: #FFD700;
     font-size: 3em;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
@@ -160,12 +160,107 @@ footer {
     margin: 0 5px; /* Adjust margin for spacing */
 }
 
+/* Schedule table styling remains the same */
+
+
+
+/* Schedule table styling remains the same */
+
+
+
+/* Additional styling for the team page */
+.team-member {
+    background-color: #000000;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+table.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.schedule th, table.schedule td {
+    border: 1px solid #FFD700;
+    padding: 10px;
+    text-align: center;
+}
+
+table.schedule th {
+    background-color: #000000;
+}
+
+table.schedule td {
+    background-color: #000000;
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 10px 0;
+    color: #ffffff;
+}
+/* Additional styling for the team page */
+.team-member {
+    background-color: #000000;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth hover effect */
+}
+
+.team-member:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+.team-member img {
+    width: 80px; /* Decrease image size */
+    height: 80px; /* Decrease image size */
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth hover effect */
+}
+
+.team-member:hover img {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+.team-member .social-media {
+    margin-top: 10px; /* Add margin to separate from the team member content */
+}
+
+.team-member .social-media img {
+    width: 30px; /* Decrease social media image size */
+    height: 30px; /* Decrease social media image size */
+    margin: 0 5px; /* Adjust margin for spacing */
+}
 .social-media img {
     width: 30px; /* Adjust this value as needed */
     height: auto; /* This maintains the aspect ratio */
     margin-right: 10px; /* Add some space between the icons */
 }
-
 .sponsor-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -186,7 +281,6 @@ footer {
     border-radius: 5px;
     margin-bottom: 10px;
 }
-
 body {
     background-color: #000000;
     color: #ffffff;
@@ -201,7 +295,7 @@ header {
     background-color: #000000;
     padding: 10px 0;
     text-align: center;
-    color: #ffffff;
+    color: #FFD700;
 }
 
 nav ul {
@@ -223,6 +317,8 @@ h1, h2, h3 {
     color: #FFD700;
 }
 
+/* Add this CSS to your styles.css file */
+
 header, footer {
     background-color: #000;
     background-image: repeating-linear-gradient(
@@ -233,19 +329,19 @@ header, footer {
         #000000 20px
     );
 }
-
+/* Styles for smaller screens */
 @media (max-width: 768px) {
     header {
       flex-direction: column;
       align-items: flex-start;
     }
-
+  
     nav ul {
       flex-direction: column;
     }
-
+  
     nav ul li {
       margin-right: 0;
       margin-bottom: 0.5rem;
     }
-}
+  }
