@@ -1,48 +1,70 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official site of Cardiff Vikings Basketball. Get match updates, training schedules, team news, and follow us on social media.">
-  <title>Cardiff Vikings</title>
-
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- ✅ Your custom styles (this line is new) -->
-  <link rel="stylesheet" href="assets/styles.css">
-
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Official site of Cardiff Vikings Basketball. Get match updates, training schedules, team news, and follow us on social media." name="description"/>
+<title>Cardiff Vikings</title>
+<!-- Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<!-- ✅ Your custom styles (this line is new) -->
+<link href="assets/styles.css" rel="stylesheet"/>
+<link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 </head>
 <body class="bg-black text-white font-sans">
+<header class="bg-yellow-500 text-black p-4 flex flex-col md:flex-row md:justify-between items-center">
+<div class="flex items-center space-x-4">
+<img alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain" src="assets/images/logo.jpg"/>
+<h1 class="text-2xl font-bold">Cardiff Vikings</h1>
+</div>
+<nav class="mt-4 md:mt-0">
+<ul class="flex flex-wrap gap-3 text-sm md:text-base justify-center md:justify-end">
+<li><a class="hover:underline" href="index.html">Home</a></li>
+<li><a class="hover:underline" href="about.html">About</a></li>
+<li><a class="hover:underline" href="team.html">Team</a></li>
+<li><a class="hover:underline" href="schedule.html">Training</a></li>
+<li><a class="hover:underline" href="match_schedule.html">Matches</a></li>
+<li><a class="hover:underline" href="contact.html">Contact</a></li>
+<li><a class="hover:underline" href="sponsors.html">Sponsors</a></li>
+<li><a class="hover:underline" href="news.html">News</a></li>
+</ul>
+</nav>
+</header>
+<section class="p-6 text-center">
+<h2 class="text-xl font-bold mb-2">Latest News</h2>
 
-  <header class="bg-yellow-500 text-black p-4 flex flex-col md:flex-row md:justify-between items-center">
-    <div class="flex items-center space-x-4">
-      <img src="assets/images/logo.jpg" alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain">
-      <h1 class="text-2xl font-bold">Cardiff Vikings</h1>
-    </div>
-    <nav class="mt-4 md:mt-0">
-      <ul class="flex flex-wrap gap-3 text-sm md:text-base justify-center md:justify-end">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="about.html" class="hover:underline">About</a></li>
-        <li><a href="team.html" class="hover:underline">Team</a></li>
-        <li><a href="schedule.html" class="hover:underline">Training</a></li>
-        <li><a href="match_schedule.html" class="hover:underline">Matches</a></li>
-        <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        <li><a href="sponsors.html" class="hover:underline">Sponsors</a></li>
-        <li><a href="news.html" class="hover:underline">News</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="p-6 text-center">
-    <h2 class="text-xl font-bold mb-2">Latest News</h2>
-    <div id="newsDataContainer" class="mt-6"></div>
-  </section>
-
-    <footer>
-        <p>&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+</section>
+<footer>
+<p>© 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
+<section class="px-6 py-10 max-w-4xl mx-auto">
+<h2 class="text-3xl font-bold mb-6 text-center text-yellow-400">Cardiff Vikings Match Reports</h2>
+<div class="space-y-6" id="previousResultsContainer">
+<!-- Dynamic content will be injected here -->
+</div>
+<script>
+    fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTe0jfYrTl_cfqVt812QFYvCu2ZeZ9XXepyX-K3wchDf-GILqODcBHATiA0P5ROzKb3lPM4p3Maf4VX/pub?output=csv')
+      .then(response => response.text())
+      .then(csv => {
+        const rows = csv.split('\n').slice(1);
+        const today = new Date();
+        let html = '';
+        rows.forEach(row => {
+          const cols = row.split(',');
+          const matchDate = new Date(cols[0]);
+          if (matchDate < today) {
+            html += `
+              <article class="bg-white text-black p-4 rounded shadow-md">
+                <h3 class="text-xl font-semibold text-yellow-600">${cols[0]}: ${cols[1]} ${cols[2]} vs ${cols[3]} ${cols[4]}</h3>
+                <p class="mt-2">In a thrilling contest between ${cols[1]} and ${cols[3]}, the final score ended ${cols[2]} - ${cols[4]}. Stay tuned for detailed match reports, highlights, and post-match reactions.</p>
+              </article>
+            `;
+          }
+        });
+        document.getElementById('previousResultsContainer').innerHTML = html;
+      });
+  </script>
+</section></body>
 </html>

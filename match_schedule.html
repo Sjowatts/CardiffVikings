@@ -37,7 +37,25 @@
 
   <section class="p-6 text-center">
     <h2 class="text-xl font-bold mb-2">Match Schedule</h2>
-    <p class="max-w-xl mx-auto">Content for Match Schedule will be added here.</p>
+    <div id="upcomingGamesContainer" class="mt-6"></div>
+<script>
+  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTe0jfYrTl_cfqVt812QFYvCu2ZeZ9XXepyX-K3wchDf-GILqODcBHATiA0P5ROzKb3lPM4p3Maf4VX/pub?output=csv')
+    .then(response => response.text())
+    .then(csv => {
+      const rows = csv.split('\n').slice(1);
+      const today = new Date();
+      let html = '<h3 class="text-lg font-semibold mb-2">Upcoming Games</h3><ul class="space-y-1">';
+      rows.forEach(row => {
+        const cols = row.split(',');
+        const matchDate = new Date(cols[0]);
+        if (matchDate >= today) {
+          html += `<li>${cols[0]} - ${cols[1]} vs ${cols[3]}</li>`;
+        }
+      });
+      html += '</ul>';
+      document.getElementById('upcomingGamesContainer').innerHTML = html;
+    });
+</script>
   </section>
 
     <footer>
