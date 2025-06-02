@@ -7,11 +7,13 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 header {
     background-image: url('logo.jpg'); /* Replace 'your-hero-image.jpg' with your actual image path */
-    background-size: cover;
     background-position: center;
     padding: 30px 10px;
     text-align: center;
@@ -195,6 +197,9 @@ body {
     color: #FFD700;
     margin: 0;
     padding: 0;
+  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 header {
@@ -273,6 +278,9 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 main {
@@ -282,4 +290,10 @@ main {
 footer {
   padding: 20px;
   text-align: center;
+}
+
+body {
+  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
