@@ -306,3 +306,27 @@ body {
   background-size: cover;
   background-blend-mode: overlay;
 }
+/* Transparent Basketball Court Background */
+body {
+  background-color: #000000;
+  background-image: url('assets/images/basketball-court.jpg'); /* ensure the path matches */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+  color: #ffffff;
+}
+
+/* Optional: So header/footer text stays visible over background */
+header, footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+/* Optional: Content wrapper to maintain contrast */
+main, section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+}
