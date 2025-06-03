@@ -7,7 +7,7 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -197,7 +197,7 @@ body {
     color: #FFD700;
     margin: 0;
     padding: 0;
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -278,7 +278,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -293,7 +293,7 @@ footer {
 }
 
 body {
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
