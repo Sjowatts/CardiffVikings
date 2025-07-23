@@ -15,7 +15,17 @@
 <body class="bg-black text-white font-sans min-h-screen flex flex-col relative overflow-x-hidden" x-data="{ open: false }">
 <!-- Header -->
 <header class="bg-yellow-500 text-black p-4 flex justify-between items-center z-30 relative">
-<!-- Desktop Nav -->
+<div class="flex items-center justify-between w-full md:w-auto space-x-4">
+<button @click="open = true" class="md:hidden focus:outline-none">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<div class="flex items-center space-x-4">
+<img alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain" src="assets/images/logo.jpg"/>
+<h1 class="text-2xl font-bold">Cardiff Vikings</h1>
+</div>
+</div>
 <nav class="hidden md:flex space-x-4 text-sm md:text-base">
 <a class="hover:underline" href="index.html">Home</a>
 <a class="hover:underline font-bold" href="about.html">About</a>
