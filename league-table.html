@@ -7,31 +7,8 @@
   <meta name="description" content="Official site of Cardiff Vikings Basketball.">
   <title>Cardiff Vikings - League Table</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css">
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 <body class="bg-black text-white font-sans">
-
-  <header class="bg-yellow-500 text-black p-4 flex flex-col md:flex-row md:justify-between items-center">
-    <div class="flex items-center space-x-4">
-      <img src="assets/images/logo.jpg" alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain">
-      <h1 class="text-2xl font-bold">Cardiff Vikings</h1>
-    </div>
-    <nav class="mt-4 md:mt-0">
-      <ul class="flex flex-wrap gap-3 text-sm md:text-base justify-center md:justify-end">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="about.html" class="hover:underline">About</a></li>
-        <li><a href="team.html" class="hover:underline">Team</a></li>
-        <li><a href="schedule.html" class="hover:underline">Training</a></li>
-        <li><a href="league-table.html" class="hover:underline font-bold">League Table</a></li>
-        <li><a href="match_schedule.html" class="hover:underline">Matches</a></li>
-        <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        <li><a href="sponsors.html" class="hover:underline">Sponsors</a></li>
-        <li><a href="news.html" class="hover:underline">News</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <main class="px-4 py-8 max-w-5xl mx-auto">
     <h2 class="text-center text-3xl font-bold text-yellow-400 mb-6">SWBA League Table</h2>
     <div class="overflow-x-auto shadow-md rounded-lg">
@@ -39,14 +16,14 @@
 <table class="w-full border-collapse text-sm text-white cursor-pointer" id="leagueTable">
 <thead>
 <tr>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(0)">Team</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(1)">P</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(2)">W</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(3)">L</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(4)">F</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(5)">A</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(6)">+/-</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(7)">PTS</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(0)">Team</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(1)">P</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(2)">W</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(3)">L</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(4)">F</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(5)">A</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(6)">+/-</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center hover:bg-yellow-600 transition" onclick="sortTable(7)">PTS</th>
 </tr>
 </thead>
 <tbody>
@@ -67,47 +44,27 @@
 
     </div>
   </main>
-
-  <section class="text-center py-6">
-    <h2 class="text-2xl font-semibold mb-4">Follow Us on Social Media</h2>
-    <div class="flex justify-center items-center gap-6">
-      <a href="https://www.facebook.com/groups/1791205021357650" target="_blank">
-        <img src="assets/images/facebook-icon.png" alt="Facebook" class="h-8 hover:scale-110 transition-transform duration-200">
-      </a>
-      <a href="https://x.com/CardiffVikings" target="_blank">
-        <img src="assets/images/twitter-icon.png" alt="Twitter" class="h-8 hover:scale-110 transition-transform duration-200">
-      </a>
-      <a href="https://www.instagram.com/cardiffvikings24/" target="_blank">
-        <img src="assets/images/instagram-icon.png" alt="Instagram" class="h-8 hover:scale-110 transition-transform duration-200">
-      </a>
-      <a href="https://www.youtube.com/channel/UCLTMI8WLAnGnsk7J-Akcr3Q" target="_blank">
-        <img src="assets/images/youtube-icon.png" alt="YouTube" class="h-8 hover:scale-110 transition-transform duration-200">
-      </a>
-      <a href="https://www.tiktok.com/@cardiffvikings?lang=en" target="_blank">
-        <img src="assets/images/tiktok-icon.png" alt="TikTok" class="h-8 hover:scale-110 transition-transform duration-200">
-      </a>
-    </div>
-  </section>
-
-  <footer class="text-center text-sm text-gray-400 py-4">
-    <p>&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
-  </footer>
-
   
 <script>
-function sortTable(n) {
+function sortTable(n, auto = false) {
   var table = document.getElementById("leagueTable");
   var rows = Array.from(table.rows).slice(1);
-  var switching = true, dir = "desc", switchcount = 0;
+  var dir = auto ? "desc" : "asc";
+  var switching = true, switchcount = 0;
+
+  for (let th of table.rows[0].cells) {
+    th.style.backgroundColor = "";
+  }
+  table.rows[0].cells[n].style.backgroundColor = "#FACC15";
 
   while (switching) {
     switching = false;
     for (let i = 1; i < rows.length - 1; i++) {
       let shouldSwitch = false;
-      let x = rows[i].getElementsByTagName("TD")[n];
-      let y = rows[i + 1].getElementsByTagName("TD")[n];
-      let xVal = isNaN(parseFloat(x.innerHTML)) ? x.innerHTML.toLowerCase() : parseFloat(x.innerHTML);
-      let yVal = isNaN(parseFloat(y.innerHTML)) ? y.innerHTML.toLowerCase() : parseFloat(y.innerHTML);
+      let x = rows[i].cells[n];
+      let y = rows[i + 1].cells[n];
+      let xVal = isNaN(x.innerHTML) ? x.innerHTML.toLowerCase() : parseFloat(x.innerHTML);
+      let yVal = isNaN(y.innerHTML) ? y.innerHTML.toLowerCase() : parseFloat(y.innerHTML);
 
       if ((dir === "asc" && xVal > yVal) || (dir === "desc" && xVal < yVal)) {
         shouldSwitch = true;
@@ -118,12 +75,13 @@ function sortTable(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       switchcount++;
-    } else if (switchcount === 0 && dir === "desc") {
-      dir = "asc";
+    } else if (switchcount === 0 && !auto) {
+      dir = dir === "asc" ? "desc" : "asc";
       switching = true;
     }
   }
 }
+window.onload = () => sortTable(7, true);  // Auto-sort by PTS
 </script>
 
 </body>
