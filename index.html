@@ -80,10 +80,6 @@
   </div>
 </main>
 
-<footer class="text-center text-sm text-gray-400 py-4 bg-black border-t border-gray-700">
-  <p>&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
-</footer>
-
 <script>
 function carousel() {
   return {
@@ -91,7 +87,7 @@ function carousel() {
     active: 0,
     interval: null,
     init() {
-      fetch('assets/images/gallery.json')
+      fetch('assets/images/gallery/gallery.json')
         .then(res => res.json())
         .then(data => {
           this.images = data;
