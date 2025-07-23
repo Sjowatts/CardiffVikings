@@ -4,10 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official site of Cardiff Vikings Basketball. Get match updates, training schedules, team news, and follow us on social media.">
+  <meta name="description" content="Official site of Cardiff Vikings Basketball.">
   <title>Cardiff Vikings - League Table</title>
-
-  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -38,32 +36,32 @@
     <h2 class="text-center text-3xl font-bold text-yellow-400 mb-6">SWBA League Table</h2>
     <div class="overflow-x-auto shadow-md rounded-lg">
       
-<table class="w-full border-collapse text-sm text-white">
+<table class="w-full border-collapse text-sm text-white cursor-pointer" id="leagueTable">
 <thead>
 <tr>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">Team</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">P</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">W</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">L</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">F</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">A</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">+/-</th>
-<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2">PTS</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(0)">Team</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(1)">P</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(2)">W</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(3)">L</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(4)">F</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(5)">A</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(6)">+/-</th>
+<th class="bg-black text-yellow-400 border border-yellow-400 px-3 py-2 text-center" onclick="sortTable(7)">PTS</th>
 </tr>
 </thead>
 <tbody>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Cardiff Vikings</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">3</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">280</td><td class="border border-yellow-400 px-3 py-2 text-center">250</td><td class="border border-yellow-400 px-3 py-2 text-center">+30</td><td class="border border-yellow-400 px-3 py-2 text-center">6</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Major Merlins</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">3</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">270</td><td class="border border-yellow-400 px-3 py-2 text-center">240</td><td class="border border-yellow-400 px-3 py-2 text-center">+30</td><td class="border border-yellow-400 px-3 py-2 text-center">6</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Caerphilly Cobras 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">260</td><td class="border border-yellow-400 px-3 py-2 text-center">260</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">4</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Merthyr Mustangs</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">3</td><td class="border border-yellow-400 px-3 py-2 text-center">240</td><td class="border border-yellow-400 px-3 py-2 text-center">270</td><td class="border border-yellow-400 px-3 py-2 text-center">-30</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Cardiff Eagles 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">3</td><td class="border border-yellow-400 px-3 py-2 text-center">230</td><td class="border border-yellow-400 px-3 py-2 text-center">280</td><td class="border border-yellow-400 px-3 py-2 text-center">-50</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">ABC Gwent 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">245</td><td class="border border-yellow-400 px-3 py-2 text-center">245</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">4</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Beddau Knights 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">250</td><td class="border border-yellow-400 px-3 py-2 text-center">250</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">4</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Ebbw Vale Vikings</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">3</td><td class="border border-yellow-400 px-3 py-2 text-center">215</td><td class="border border-yellow-400 px-3 py-2 text-center">275</td><td class="border border-yellow-400 px-3 py-2 text-center">-60</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Ely Titans</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">3</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">295</td><td class="border border-yellow-400 px-3 py-2 text-center">235</td><td class="border border-yellow-400 px-3 py-2 text-center">+60</td><td class="border border-yellow-400 px-3 py-2 text-center">6</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Tonyrefail Tigers</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">4</td><td class="border border-yellow-400 px-3 py-2 text-center">210</td><td class="border border-yellow-400 px-3 py-2 text-center">300</td><td class="border border-yellow-400 px-3 py-2 text-center">-90</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Pontypridd Panthers</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">3</td><td class="border border-yellow-400 px-3 py-2 text-center">230</td><td class="border border-yellow-400 px-3 py-2 text-center">265</td><td class="border border-yellow-400 px-3 py-2 text-center">-35</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td></tr>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">RCT Gladiators 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">2</td><td class="border border-yellow-400 px-3 py-2 text-center">255</td><td class="border border-yellow-400 px-3 py-2 text-center">245</td><td class="border border-yellow-400 px-3 py-2 text-center">+10</td><td class="border border-yellow-400 px-3 py-2 text-center">4</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Cardiff Vikings</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Major Merlins</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Caerphilly Cobras 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Merthyr Mustangs</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Cardiff Eagles 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">ABC Gwent 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Beddau Knights 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Ebbw Vale Vikings</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Ely Titans</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Tonyrefail Tigers</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Pontypridd Panthers</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">RCT Gladiators 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
 </tbody>
 </table>
 
@@ -94,5 +92,39 @@
   <footer class="text-center text-sm text-gray-400 py-4">
     <p>&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
   </footer>
+
+  
+<script>
+function sortTable(n) {
+  var table = document.getElementById("leagueTable");
+  var rows = Array.from(table.rows).slice(1);
+  var switching = true, dir = "desc", switchcount = 0;
+
+  while (switching) {
+    switching = false;
+    for (let i = 1; i < rows.length - 1; i++) {
+      let shouldSwitch = false;
+      let x = rows[i].getElementsByTagName("TD")[n];
+      let y = rows[i + 1].getElementsByTagName("TD")[n];
+      let xVal = isNaN(parseFloat(x.innerHTML)) ? x.innerHTML.toLowerCase() : parseFloat(x.innerHTML);
+      let yVal = isNaN(parseFloat(y.innerHTML)) ? y.innerHTML.toLowerCase() : parseFloat(y.innerHTML);
+
+      if ((dir === "asc" && xVal > yVal) || (dir === "desc" && xVal < yVal)) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else if (switchcount === 0 && dir === "desc") {
+      dir = "asc";
+      switching = true;
+    }
+  }
+}
+</script>
+
 </body>
 </html>
