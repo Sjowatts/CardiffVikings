@@ -33,17 +33,17 @@
   </nav>
 </header>
 
-<main class="flex-grow">
+<main class="flex-grow p-6">
 
-<section class="p-8 text-center bg-gray-900 border-t-4 border-yellow-400">
+<section class="max-w-4xl mx-auto bg-gray-900 border-2 border-yellow-400 rounded-xl shadow-lg p-8 text-center mb-10">
   <h2 class="text-3xl font-bold text-yellow-400 mb-4">Welcome to Cardiff Vikings Basketball</h2>
-  <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-200">
+  <p class="text-lg leading-relaxed text-gray-200">
     We’re proud to announce that Cardiff Vikings are officially part of the <strong>SWBA East Division 3</strong> for the upcoming season!
   </p>
-  <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-200 mt-4">
+  <p class="text-lg leading-relaxed text-gray-200 mt-4">
     As a growing club, we’re actively looking for new players to join our journey. Whether you're a seasoned player or just getting back on the court, there's a place for you on this team.
   </p>
-  <p class="max-w-3xl mx-auto text-lg leading-relaxed text-gray-200 mt-4">
+  <p class="text-lg leading-relaxed text-gray-200 mt-4">
     With the season fast approaching, excitement is building — and we can’t wait to compete, grow, and represent Cardiff with pride. Let’s go Vikings! 🏀
   </p>
   <div class="mt-6">
@@ -53,9 +53,9 @@
   </div>
 </section>
 
-<section class="p-6 text-center">
+<section class="max-w-4xl mx-auto bg-gray-900 border-2 border-yellow-400 rounded-xl shadow-lg p-6 text-center mb-10">
   <h2 class="text-3xl font-bold text-yellow-400 mb-6">Team Highlights</h2>
-  <div x-data="carousel()" x-init="init()" class="relative max-w-4xl mx-auto">
+  <div x-data="carousel()" x-init="init()" class="relative">
     <div class="overflow-hidden rounded-lg h-80 bg-black">
       <template x-for="(image, index) in images" :key="index">
         <img :src="image"
