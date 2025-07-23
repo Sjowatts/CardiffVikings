@@ -53,9 +53,8 @@
   </div>
 </section>
 
-<main class="flex-grow p-6 text-center">
+<section class="p-6 text-center">
   <h2 class="text-3xl font-bold text-yellow-400 mb-6">Team Highlights</h2>
-
   <div x-data="carousel()" x-init="init()" class="relative max-w-4xl mx-auto">
     <div class="overflow-hidden rounded-lg h-80 bg-black">
       <template x-for="(image, index) in images" :key="index">
@@ -78,7 +77,13 @@
       </template>
     </div>
   </div>
+</section>
+
 </main>
+
+<footer class="text-center text-sm text-gray-400 py-4 bg-black border-t border-gray-700">
+  <p>&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
+</footer>
 
 <script>
 function carousel() {
@@ -102,47 +107,6 @@ function carousel() {
   }
 }
 </script>
-</body>
-</html>
 
-
-<section class="p-6 text-center">
-  <h2 class="text-2xl font-semibold mb-2">Upcoming Games</h2>
-  <div id="upcomingGamesContainer"></div>
-</section>
-
-<section class="p-6 text-center">
-  <h2 class="text-2xl font-semibold mb-2">Previous Results</h2>
-  <div id="previousResultsContainer"></div>
-</section>
-
-<section class="text-center py-6">
-  <h2 class="text-2xl font-semibold mb-4">Follow Us on Social Media</h2>
-  <div class="flex justify-center items-center gap-6">
-    <a href="https://www.facebook.com/groups/1791205021357650" target="_blank">
-      <img src="assets/images/facebook-icon.png" alt="Facebook" class="h-8 hover:scale-110 transition-transform duration-200"/>
-    </a>
-    <a href="https://x.com/CardiffVikings" target="_blank">
-      <img src="assets/images/twitter-icon.png" alt="Twitter" class="h-8 hover:scale-110 transition-transform duration-200"/>
-    </a>
-    <a href="https://www.instagram.com/cardiffvikings?igsh=MTBjMHQxZWFidXlvdA==" target="_blank">
-      <img src="assets/images/instagram-icon.png" alt="Instagram" class="h-8 hover:scale-110 transition-transform duration-200"/>
-    </a>
-    <a href="https://www.youtube.com/channel/UCLTMI8WLAnGnsk7J-Akcr3Q" target="_blank">
-      <img src="assets/images/youtube-icon.png" alt="YouTube" class="h-8 hover:scale-110 transition-transform duration-200"/>
-    </a>
-    <a href="https://www.tiktok.com/@cardiffvikings?lang=en" target="_blank">
-      <img src="assets/images/tiktok-icon.png" alt="TikTok" class="h-8 hover:scale-110 transition-transform duration-200"/>
-    </a>
-  </div>
-</section>
-
-</main>
-
-<footer class="text-center text-sm text-gray-400 py-4 bg-black border-t border-gray-700">
-  <p>&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
