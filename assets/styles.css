@@ -306,3 +306,22 @@ body {
   background-size: cover;
   background-blend-mode: overlay;
 }
+/* === SWBA Table Styles === */
+.swba-table {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+.swba-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.swba-table th,
+.swba-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.swba-table th {
+  background-color: #FFD700; /* Gold highlight */
+  color: #000;
+}
