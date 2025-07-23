@@ -87,14 +87,16 @@
 </footer>
 
 
+
+
 <script>
 let lastSortedCol = -1;
 let lastDir = "desc";
 
 function sortTable(colIndex, auto = false) {
   const table = document.getElementById("leagueTable");
-  const tbody = table.tBodies[0];
-  const rows = Array.from(tbody.rows);
+  const oldTbody = table.tBodies[0];
+  const rows = Array.from(oldTbody.rows);
 
   let dir = "asc";
   if (colIndex === lastSortedCol && !auto) {
@@ -124,13 +126,15 @@ function sortTable(colIndex, auto = false) {
     return 0;
   });
 
-  // Rebuild table
-  for (let row of rows) {
-    tbody.appendChild(row);
+  // Rebuild tbody to avoid Safari append issues
+  const newTbody = document.createElement("tbody");
+  for (const row of rows) {
+    newTbody.appendChild(row.cloneNode(true));
   }
+  table.replaceChild(newTbody, oldTbody);
 }
 
-window.onload = () => sortTable(7, true); // Default: sort by PTS descending
+window.onload = () => sortTable(7, true);
 </script>
 </body>
 </html>
