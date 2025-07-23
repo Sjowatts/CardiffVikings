@@ -1,13 +1,11 @@
 /* General styles */
 body {
-    background-color: #000000;
     color: #ffffff;
     font-family: Arial, sans-serif;
-    background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -190,14 +188,12 @@ footer {
 }
 
 body {
-    background-color: #000000;
     color: #ffffff;
     font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #FFD700;
+    color: #fff;
     margin: 0;
     padding: 0;
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -269,16 +265,24 @@ header h1 {
 }
 
 /* Optional: Force footer to stick to bottom */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
@@ -293,7 +297,12 @@ footer {
 }
 
 body {
-  background: url('assets/images/basketball-court.jpg') no-repeat center center fixed;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  background: url('cardiff-vikings-responsive-site/assets/images/basketball-court.jpg') no-repeat center center fixed;
   background-size: cover;
   background-blend-mode: overlay;
 }
