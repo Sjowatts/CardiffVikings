@@ -33,7 +33,7 @@
   </header>
 
   <main class="p-6 text-center max-w-5xl mx-auto">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-6">SWBA League Table</h2>
+    <h2 class="text-3xl font-bold text-yellow-400 mb-6">SWBA East Div 3 League Table</h2>
     <div class="overflow-x-auto shadow-md rounded-lg">
       
 <table class="w-full border-collapse text-sm text-white cursor-pointer" id="leagueTable">
@@ -50,7 +50,7 @@
 </tr>
 </thead>
 <tbody>
-<tr><td class="border border-yellow-400 px-3 py-2 text-center">Cardiff Vikings</td><td class="border border-yellow-400 px-3 py-2 text-center">1</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
+<tr><td class="border border-yellow-400 px-3 py-2 text-center">Cardiff Vikings</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
 <tr><td class="border border-yellow-400 px-3 py-2 text-center">Major Merlins</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
 <tr><td class="border border-yellow-400 px-3 py-2 text-center">Caerphilly Cobras 2</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
 <tr><td class="border border-yellow-400 px-3 py-2 text-center">Merthyr Mustangs</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td><td class="border border-yellow-400 px-3 py-2 text-center">0</td></tr>
@@ -95,8 +95,7 @@
 function sortTable(n, auto = false) {
   var table = document.getElementById("leagueTable");
   var rows = Array.from(table.rows).slice(1);
-  var dir = auto ? "desc" : "asc";
-  var switching = true, switchcount = 0;
+  var switching = true, dir = auto ? "desc" : "asc", switchcount = 0;
 
   for (let th of table.rows[0].cells) {
     th.style.backgroundColor = "";
@@ -106,11 +105,11 @@ function sortTable(n, auto = false) {
   while (switching) {
     switching = false;
     for (let i = 1; i < rows.length - 1; i++) {
+      let x = rows[i].cells[n].textContent.trim();
+      let y = rows[i + 1].cells[n].textContent.trim();
+      let xVal = isNaN(x) ? x.toLowerCase() : parseFloat(x);
+      let yVal = isNaN(y) ? y.toLowerCase() : parseFloat(y);
       let shouldSwitch = false;
-      let x = rows[i].cells[n];
-      let y = rows[i + 1].cells[n];
-      let xVal = isNaN(x.innerHTML) ? x.innerHTML.toLowerCase() : parseFloat(x.innerHTML);
-      let yVal = isNaN(y.innerHTML) ? y.innerHTML.toLowerCase() : parseFloat(y.innerHTML);
 
       if ((dir === "asc" && xVal > yVal) || (dir === "desc" && xVal < yVal)) {
         shouldSwitch = true;
@@ -125,6 +124,12 @@ function sortTable(n, auto = false) {
       dir = dir === "asc" ? "desc" : "asc";
       switching = true;
     }
+  }
+
+  // Reattach sorted rows
+  let tbody = table.tBodies[0];
+  for (let i = 0; i < rows.length; i++) {
+    tbody.appendChild(rows[i]);
   }
 }
 window.onload = () => sortTable(7, true);
