@@ -1,91 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official site of Cardiff Vikings Basketball. Get match updates, training schedules, team news, and follow us on social media.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Official site of Cardiff Vikings Basketball.">
   <title>Cardiff Vikings</title>
-
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- ✅ Your custom styles (this line is new) -->
-  <link rel="stylesheet" href="assets/styles.css">
-
-  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
 </head>
-<body class="bg-black text-white font-sans">
+<body class="bg-black text-white font-sans min-h-screen flex flex-col">
 
-  <header class="bg-yellow-500 text-black p-4 flex flex-col md:flex-row md:justify-between items-center">
-    <div class="flex items-center space-x-4">
-      <img src="assets/images/logo.jpg" alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain">
-      <h1 class="text-2xl font-bold">Cardiff Vikings</h1>
-    </div>
-    <nav class="mt-4 md:mt-0">
-      <ul class="flex flex-wrap gap-3 text-sm md:text-base justify-center md:justify-end">
-        <li><a href="index.html" class="hover:underline">Home</a></li>
-        <li><a href="about.html" class="hover:underline">About</a></li>
-        <li><a href="team.html" class="hover:underline">Team</a></li>
-        <li><a href="schedule.html" class="hover:underline">Training</a></li>
-        <li><a href="league-table.html" class="hover:underline">League Table</a></li>
-        <li><a href="match_schedule.html" class="hover:underline">Matches</a></li>
-        <li><a href="contact.html" class="hover:underline">Contact</a></li>
-        <li><a href="sponsors.html" class="hover:underline">Sponsors</a></li>
-        <li><a href="news.html" class="hover:underline">News</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="bg-yellow-500 text-black p-4 flex flex-col md:flex-row md:justify-between items-center">
+  <div class="flex items-center space-x-4">
+    <img src="assets/images/logo.jpg" alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain"/>
+    <h1 class="text-2xl font-bold">Cardiff Vikings</h1>
+  </div>
+  <nav class="mt-4 md:mt-0">
+    <ul class="flex flex-wrap gap-3 text-sm md:text-base justify-center md:justify-end">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="about.html" class="hover:underline">About</a></li>
+      <li><a href="team.html" class="hover:underline">Team</a></li>
+      <li><a href="schedule.html" class="hover:underline">Training</a></li>
+      <li><a href="league-table.html" class="hover:underline">League Table</a></li>
+      <li><a href="match_schedule.html" class="hover:underline">Matches</a></li>
+      <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      <li><a href="sponsors.html" class="hover:underline">Sponsors</a></li>
+      <li><a href="news.html" class="hover:underline font-bold">News</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section class="p-6 text-center">
-  <h2 class="text-xl font-bold mb-2">Latest News</h2>
+<main class="flex-grow p-6 max-w-4xl mx-auto">
+  <h2 class="text-3xl font-bold mb-6 text-center text-yellow-500">Club News</h2>
 
-  <!-- NEWS ITEM START -->
-  <article class="bg-yellow-500 text-black rounded-lg p-6 max-w-3xl mx-auto mb-6 shadow-lg">
-    <h3 class="text-2xl font-bold mb-2">Cardiff Vikings Join SWBA East Division 3!</h3>
-    <p class="text-base mb-4">
-      We’re proud to announce that <strong>Cardiff Vikings Basketball Club</strong> has officially been registered to compete in the
-      <strong>SWBA East Division 3</strong> for the <strong>2025/26 season</strong>! 🏀
-    </p>
-    <p class="text-base mb-4">
-      This marks a huge step forward for the club, as we move from friendlies and foundation-building into full league competition.
-      The journey so far has been built on commitment, community, and a shared passion for the game — and this next chapter promises even more.
-    </p>
-    <p class="text-base mb-4">
-      We’re looking forward to testing ourselves against some of the toughest grassroots talent in South Wales and continuing to grow
-      both on and off the court.
-    </p>
-    <p class="text-base mb-4">
-      <strong>📅 Fixtures will be released later this summer.</strong><br>
-      📲 Stay tuned for player signings, preseason updates, and ways to get involved.
-    </p>
-    <p class="text-base font-semibold">Let’s go, Vikings! ⚔️</p>
+  <article class="bg-yellow-500 text-black rounded-xl p-6 shadow-lg">
+    <h3 class="text-2xl font-extrabold mb-3">Cardiff Vikings Join SWBA East Division 3!</h3>
+    <p class="mb-3">We’re proud to announce that <strong>Cardiff Vikings Basketball Club</strong> has officially been registered to compete in the <strong>SWBA East Division 3</strong> for the <strong>2025/26 season</strong>! 🏀</p>
+    <p class="mb-3">This marks a huge step forward for the club, as we move from friendlies and foundation-building into full league competition. The journey so far has been built on commitment, community, and a shared passion for the game — and this next chapter promises even more.</p>
+    <p class="mb-3">We’re looking forward to testing ourselves against some of the toughest grassroots talent in South Wales and continuing to grow both on and off the court.</p>
+    <p class="mb-3 font-semibold">📅 Fixtures will be released later this summer.<br>
+    📲 Stay tuned for player signings, preseason updates, and ways to get involved.</p>
+    <p class="font-bold">Let’s go, Vikings! ⚔️</p>
     <p class="text-sm mt-4">#CardiffVikings #SWBA #BasketballWales #EastDiv3 #VikingUp</p>
   </article>
-  <!-- NEWS ITEM END -->
+</main>
 
-  <div id="previousResultsContainer" class="mt-6"></div>
+<footer class="text-center py-6 border-t border-yellow-500 mt-10">
+  <h2 class="text-xl font-semibold mb-4">Follow Us on Social Media</h2>
+  <div class="flex justify-center items-center gap-6">
+    <a href="https://www.facebook.com/groups/1791205021357650" target="_blank">
+      <img src="assets/images/facebook-icon.png" alt="Facebook" class="h-8 hover:scale-110 transition-transform duration-200"/>
+    </a>
+    <a href="https://x.com/CardiffVikings" target="_blank">
+      <img src="assets/images/twitter-icon.png" alt="Twitter" class="h-8 hover:scale-110 transition-transform duration-200"/>
+    </a>
+    <a href="https://www.instagram.com/cardiffvikings?igsh=MTBjMHQxZWFidXlvdA==" target="_blank">
+      <img src="assets/images/instagram-icon.png" alt="Instagram" class="h-8 hover:scale-110 transition-transform duration-200"/>
+    </a>
+    <a href="https://www.youtube.com/channel/UCLTMI8WLAnGnsk7J-Akcr3Q" target="_blank">
+      <img src="assets/images/youtube-icon.png" alt="YouTube" class="h-8 hover:scale-110 transition-transform duration-200"/>
+    </a>
+    <a href="https://www.tiktok.com/@cardiffvikings?lang=en" target="_blank">
+      <img src="assets/images/tiktok-icon.png" alt="TikTok" class="h-8 hover:scale-110 transition-transform duration-200"/>
+    </a>
+  </div>
+  <p class="mt-6 text-sm">&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
+</footer>
 
-    <footer class="text-center py-6">
-    <h2 class="text-2xl font-semibold mb-4">Follow Us on Social Media</h2>
-    <div class="flex justify-center items-center gap-6">
-      <a href="https://www.facebook.com/groups/1791205021357650" target="_blank">
-        <img src="assets/images/facebook-icon.png" alt="Facebook" class="h-8 hover:scale-110 transition-transform duration-200"/>
-      </a>
-      <a href="https://x.com/CardiffVikings" target="_blank">
-        <img src="assets/images/twitter-icon.png" alt="Twitter" class="h-8 hover:scale-110 transition-transform duration-200"/>
-      </a>
-      <a href="https://www.instagram.com/cardiffvikings?igsh=MTBjMHQxZWFidXlvdA==" target="_blank">
-        <img src="assets/images/instagram-icon.png" alt="Instagram" class="h-8 hover:scale-110 transition-transform duration-200"/>
-      </a>
-      <a href="https://www.youtube.com/channel/UCLTMI8WLAnGnsk7J-Akcr3Q" target="_blank">
-        <img src="assets/images/youtube-icon.png" alt="YouTube" class="h-8 hover:scale-110 transition-transform duration-200"/>
-      </a>
-      <a href="https://www.tiktok.com/@cardiffvikings?lang=en" target="_blank">
-        <img src="assets/images/tiktok-icon.png" alt="TikTok" class="h-8 hover:scale-110 transition-transform duration-200"/>
-      </a>
-    </div>
-    <p class="mt-6">&copy; 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
-  </footer>
-    <script src="script.js"></script>
 </body>
 </html>
