@@ -37,27 +37,33 @@
   </header>
 
   <section class="p-6 text-center">
-    <h2 class="text-xl font-bold mb-2">Latest News</h2>
-   <div id="previousResultsContainer" class="mt-6"></div>
-<script>
-  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQScNsYf2l6CR9uKK7gugeWwG4LVAao4DSkAnqPfbIKvQnKCmzn3rNMBIjcWYmpx6xyDyL8gnnWztQN/pub?output=csv')
-    .then(response => response.text())
-    .then(csv => {
-      const rows = csv.split('\n').slice(1);
-      const today = new Date();
-      let html = '<h3 class="text-lg font-semibold mb-2">Previous Results</h3><ul class="space-y-1">';
-      rows.forEach(row => {
-        const cols = row.split(',');
-        const matchDate = new Date(cols[0]);
-        if (matchDate < today) {
-          html += `<li>${cols[0]} - ${cols[1]} ${cols[2]} vs ${cols[3]} ${cols[4]}</li>`;
-        }
-      });
-      html += '</ul>';
-      document.getElementById('previousResultsContainer').innerHTML = html;
-    });
-</script>
-  </section>
+  <h2 class="text-xl font-bold mb-2">Latest News</h2>
+
+  <!-- NEWS ITEM START -->
+  <article class="bg-yellow-500 text-black rounded-lg p-6 max-w-3xl mx-auto mb-6 shadow-lg">
+    <h3 class="text-2xl font-bold mb-2">Cardiff Vikings Join SWBA East Division 3!</h3>
+    <p class="text-base mb-4">
+      We’re proud to announce that <strong>Cardiff Vikings Basketball Club</strong> has officially been registered to compete in the
+      <strong>SWBA East Division 3</strong> for the <strong>2025/26 season</strong>! 🏀
+    </p>
+    <p class="text-base mb-4">
+      This marks a huge step forward for the club, as we move from friendlies and foundation-building into full league competition.
+      The journey so far has been built on commitment, community, and a shared passion for the game — and this next chapter promises even more.
+    </p>
+    <p class="text-base mb-4">
+      We’re looking forward to testing ourselves against some of the toughest grassroots talent in South Wales and continuing to grow
+      both on and off the court.
+    </p>
+    <p class="text-base mb-4">
+      <strong>📅 Fixtures will be released later this summer.</strong><br>
+      📲 Stay tuned for player signings, preseason updates, and ways to get involved.
+    </p>
+    <p class="text-base font-semibold">Let’s go, Vikings! ⚔️</p>
+    <p class="text-sm mt-4">#CardiffVikings #SWBA #BasketballWales #EastDiv3 #VikingUp</p>
+  </article>
+  <!-- NEWS ITEM END -->
+
+  <div id="previousResultsContainer" class="mt-6"></div>
 
     <footer class="text-center py-6">
     <h2 class="text-2xl font-semibold mb-4">Follow Us on Social Media</h2>
