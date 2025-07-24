@@ -11,8 +11,7 @@
 <link href="assets/styles.css" rel="stylesheet"/>
 <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 <script defer="True" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script></head>
-<body class="bg-black text-white font-sans min-h-screen flex flex-col relative overflow-x-hidden" x-data="{ open: false }">
-
+<body class="bg-black text-white font-sans min-h-screen flex flex-col relative overflow-x-hidden justify-between" x-data="{ open: false }">
 <!-- Overlay -->
 <div @click="open = false" class="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden" x-show="open" x-transition.opacity=""></div>
 <!-- Slide-in Left Mobile Nav -->
@@ -56,8 +55,6 @@
 <a class="hover:underline" href="news.html">News</a>
 </nav>
 </header>
-
-
 <main class="p-6 w-full px-4 text-center">
 <h2 class="text-3xl font-bold text-yellow-400 mb-6">SWBA League Table</h2>
 <div class="overflow-x-auto shadow-md rounded-lg">
