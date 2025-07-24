@@ -57,7 +57,176 @@
 </header>
 <section class="max-w-4xl mx-auto bg-gray-900 border-2 border-yellow-400 rounded-xl shadow-lg p-6 text-center mb-10 mt-10">
 <h2 class="text-xl font-bold mb-2">Match Schedule</h2>
-<div class="mt-6" id="upcomingGamesContainer"><h3 class="text-lg font-semibold mb-2">2025/26 Fixture List</h3><ul class="space-y-2"><li>28th September  - Tonyrefail Tigers Vs Vikings (Away)</li><li>28th September  - Vikings  Vs ABC Gwent 2 (Home)</li><li>5th October  - Beddau Kinghts 2 Vs Vikings (Away)</li><li>12th October - Vikings Vs RCT Gladiators 2 (Home)</li><li>19th October - Major Merlin's Vs  Vikings (Away)</li><li>26th October  - Vikings Vs Pontypridd Panthers (Home)</li><li>2nd November - Ely Titans Vs Vikings (Away)</li><li>9th November  - Vikings Vs Caerphilly Cobars 2 (Home)</li><li>16th November - Merthyr Mustangs Vs Vikings (Away)</li><li>23rd November  - Ebbw Vale Vikings Vs Vikings (Away)</li><li>23rd November  - Vikings Vs Cardiff Eagles 2 (Home)</li><li>30th November  - Vikings Vs Tonyrefail Tigers (Home)</li><li>30th November  - ABC Gwent 2 Vs Vikings  (Away)</li><li>7th December  - Vikings Vs Beddau Kinghts 2 (Home)</li><li>14th December  - RCT Gladiators 2 Vs Vikings (Away)</li><li>21st December  - Vikings Vs Major Merlin's (Home)</li><li>28th December  - Vikings Vs Ely Titans (Home)</li><li>28th December  - Pontypridd Panthers Vs Vikings (Away)</li><li>11th January  - Caerphilly Cobars 2 Vs Vikings (Away)</li><li>18th January  - Vikings Vs Merthyr Mustangs (Home)</li><li>18th January  - Cardiff Eagles 2 Vs Vikings (Away)</li><li>25th January  - Vikings Vs Ebbw Vale Vikings (Home)</li></ul></div>
+<div class="mt-6" id="upcomingGamesContainer">
+<div class="flex justify-center items-start mt-10 px-4">
+<div class="hidden md:block w-1/4 border border-yellow-500 rounded-lg p-2">
+<iframe allowtransparency="true" class="w-full h-full" frameborder="0" scrolling="no" src="https://snapwidget.com/embed/1103647"></iframe>
+</div>
+<div class="bg-[#0F172A] border border-yellow-500 rounded-xl p-6 w-full md:w-1/2 shadow-lg">
+<h2 class="text-xl font-bold text-yellow-400 mb-4 text-center">2025/26 Match Schedule</h2>
+<div class="mb-4 text-center">
+<button class="bg-yellow-500 text-black font-semibold py-1 px-3 rounded m-1" onclick="filterMatches('all')">All</button>
+<button class="bg-yellow-500 text-black font-semibold py-1 px-3 rounded m-1" onclick="filterMatches('Home')">Home</button>
+<button class="bg-yellow-500 text-black font-semibold py-1 px-3 rounded m-1" onclick="filterMatches('Away')">Away</button>
+</div>
+<table class="min-w-full text-sm text-white text-center border border-yellow-400 rounded">
+<thead>
+<tr class="bg-yellow-500 text-black">
+<th class="px-3 py-2">Date</th>
+<th class="px-3 py-2">Fixture</th>
+<th class="px-3 py-2">Venue</th>
+<th class="px-3 py-2">Type</th>
+</tr>
+</thead>
+<tbody id="fixtureTable">
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">28th September </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs ABC Gwent 2</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">12th October</td>
+<td class="border-t border-yellow-400 py-2">Vikings vs RCT Gladiators 2</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">26th October </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Pontypridd Panthers</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">9th November </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Caerphilly Cobars 2</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">23rd November </td>
+<td class="border-t border-yellow-400 py-2">Ebbw Vale Vikings vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">23rd November </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Cardiff Eagles 2</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">30th November </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Tonyrefail Tigers</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">7th December </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Beddau Kinghts 2</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">21st December </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Major Merlin's</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">28th December </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Ely Titans</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">18th January </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Merthyr Mustangs</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Home">
+<td class="border-t border-yellow-400 py-2">25th January </td>
+<td class="border-t border-yellow-400 py-2">Vikings vs Ebbw Vale Vikings</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+<td class="border-t border-yellow-400 py-2">Home</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">28th September </td>
+<td class="border-t border-yellow-400 py-2">Tonyrefail Tigers vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">5th October </td>
+<td class="border-t border-yellow-400 py-2">Beddau Kinghts 2 vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">19th October</td>
+<td class="border-t border-yellow-400 py-2">Major Merlin's vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">2nd November</td>
+<td class="border-t border-yellow-400 py-2">Ely Titans vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">16th November</td>
+<td class="border-t border-yellow-400 py-2">Merthyr Mustangs vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">30th November </td>
+<td class="border-t border-yellow-400 py-2">ABC Gwent 2 vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">14th December </td>
+<td class="border-t border-yellow-400 py-2">RCT Gladiators 2 vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">28th December </td>
+<td class="border-t border-yellow-400 py-2">Pontypridd Panthers vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">11th January </td>
+<td class="border-t border-yellow-400 py-2">Caerphilly Cobars 2 vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+<tr data-type="Away">
+<td class="border-t border-yellow-400 py-2">18th January </td>
+<td class="border-t border-yellow-400 py-2">Cardiff Eagles 2 vs Vikings</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+<td class="border-t border-yellow-400 py-2">Away</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="hidden md:block w-1/4 border border-yellow-500 rounded-lg p-2">
+<iframe allowtransparency="true" class="w-full h-full" frameborder="0" scrolling="no" src="https://snapwidget.com/embed/1103647"></iframe>
+</div>
+</div>
+<script>
+function filterMatches(type) {
+  const rows = document.querySelectorAll("#fixtureTable tr");
+  rows.forEach(row => {
+    row.style.display = (type === "all" || row.dataset.type === type) ? "" : "none";
+  });
+}
+</script>
+</div>
 </section>
 <footer class="text-center py-6 border-t border-yellow-500 mt-10">
 <h2 class="text-xl font-semibold mb-4">Follow Us on Social Media</h2>
