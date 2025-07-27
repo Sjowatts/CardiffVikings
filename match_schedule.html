@@ -41,6 +41,12 @@
 <div class="flex items-center space-x-4">
 <img alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain" src="assets/images/logo.jpg"/>
 <h1 class="text-2xl font-bold">Cardiff Vikings</h1>
+  <div class="mt-4 flex justify-center space-x-4">
+    <button onclick="filterMatches('all')" class="px-4 py-2 bg-sky-400 text-black rounded hover:bg-sky-300">All</button>
+    <button onclick="filterMatches('home')" class="px-4 py-2 bg-sky-400 text-black rounded hover:bg-sky-300">Home</button>
+    <button onclick="filterMatches('away')" class="px-4 py-2 bg-sky-400 text-black rounded hover:bg-sky-300">Away</button>
+  </div>
+
 </div>
 </div>
 <nav class="hidden md:flex space-x-4 text-sm md:text-base">
@@ -81,5 +87,25 @@
 <p class="mt-6 text-sm">© 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
 </footer>
 <script src="script.js"></script>
+
+<script>
+function filterMatches(type) {
+  const rows = document.querySelectorAll("tbody tr");
+  rows.forEach(row => {
+    const cellText = row.cells[1]?.textContent.toLowerCase() || "";
+    if (type === "all") {
+      row.style.display = "";
+    } else if (type === "home" && cellText.includes("home")) {
+      row.style.display = "";
+    } else if (type === "away" && cellText.includes("away")) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  });
+}
+window.onload = () => filterMatches("all");
+</script>
+
 </body>
 </html>
