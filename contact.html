@@ -16,8 +16,8 @@
 <!-- Overlay -->
 <div @click="open = false" class="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden" x-show="open" x-transition.opacity=""></div>
 <!-- Slide-in Left Mobile Nav -->
-<aside class="fixed top-0 left-0 w-64 h-full bg-black text-yellow-400 p-6 z-30 md:hidden shadow-lg" x-show="open" x-transition:enter="transition transform duration-300" x-transition:enter-end="translate-x-0" x-transition:enter-start="-translate-x-full" x-transition:leave="transition transform duration-300" x-transition:leave-end="-translate-x-full" x-transition:leave-start="translate-x-0">
-<button @click="open = false" class="mb-6 text-right w-full text-yellow-400 text-xl font-bold">
+<aside class="fixed top-0 left-0 w-64 h-full bg-black text-sky-400 p-6 z-30 md:hidden shadow-lg" x-show="open" x-transition:enter="transition transform duration-300" x-transition:enter-end="translate-x-0" x-transition:enter-start="-translate-x-full" x-transition:leave="transition transform duration-300" x-transition:leave-end="-translate-x-full" x-transition:leave-start="translate-x-0">
+<button @click="open = false" class="mb-6 text-right w-full text-sky-400 text-xl font-bold">
     ✕
   </button>
 <nav class="flex flex-col gap-4 text-lg font-semibold">
@@ -57,7 +57,7 @@
 </nav>
 </header>
 <main class="flex-grow p-6 text-center">
-<h2 class="text-3xl font-bold text-yellow-400 mb-6">Contact Cardiff Vikings</h2>
+<h2 class="text-3xl font-bold text-sky-400 mb-6">Contact Cardiff Vikings</h2>
 <p class="text-lg text-gray-200 mb-4 max-w-2xl mx-auto">
       If you're interested in joining the team, partnering with us, or just want to get in touch — please fill out the form below and we'll get back to you as soon as possible.
     </p>
