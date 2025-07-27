@@ -255,7 +255,7 @@ footer {
 }
 /* Gradient Header & Footer */
 header, footer {
-  background: linear-gradient(to right, #000000, #f0ad00);
+  background: linear-gradient(to right, #000000, #00e1ff);
   color: #ffffff;
 }
 
