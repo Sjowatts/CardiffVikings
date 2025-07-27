@@ -11,13 +11,13 @@ function generateTable(rows, containerId) {
     if (!container || rows.length === 0) return;
 
     const table = document.createElement('table');
-    table.classList.add('table-auto', 'w-full', 'text-left', 'border-collapse', 'border', 'border-yellow-500', 'mt-4');
+    table.classList.add('table-auto', 'w-full', 'text-left', 'border-collapse', 'border', 'border-sky-500', 'mt-4');
 
     const thead = document.createElement('thead');
     const headerRow = document.createElement('tr');
     rows[0].forEach(header => {
         const th = document.createElement('th');
-        th.classList.add('border', 'border-yellow-500', 'px-4', 'py-2', 'bg-yellow-500', 'text-black');
+        th.classList.add('border', 'border-sky-500', 'px-4', 'py-2', 'bg-sky-500', 'text-black');
         th.textContent = header;
         headerRow.appendChild(th);
     });
@@ -29,7 +29,7 @@ function generateTable(rows, containerId) {
         const tr = document.createElement('tr');
         rows[i].forEach(cell => {
             const td = document.createElement('td');
-            td.classList.add('border', 'border-yellow-500', 'px-4', 'py-2');
+            td.classList.add('border', 'border-sky-500', 'px-4', 'py-2');
             td.textContent = cell;
             tr.appendChild(td);
         });
