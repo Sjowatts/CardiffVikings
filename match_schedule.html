@@ -1,228 +1,103 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Cardiff Vikings | Match Schedule</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: sans-serif;
-        }
-        .bg-navy {
-            background-color: #0f172a;
-        }
-        .highlight {
-            background: linear-gradient(to right, #b8860b, #daa520);
-        }
-        .text-gold {
-            color: #facc15;
-        }
-        .border-gold {
-            border-color: #facc15;
-        }
-        footer {
-            margin-top: 40px;
-        }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Official site of Cardiff Vikings Basketball." name="description"/>
+<title>Cardiff Vikings</title>
+<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<link href="assets/styles.css" rel="stylesheet"/>
+<link href="assets/images/favicon.png" rel="icon" type="image/png"/>
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="highlight text-black p-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Cardiff Vikings</h1>
-        <nav class="space-x-4">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="team.html">Team</a>
-            <a href="training.html">Training</a>
-            <a href="league-table.html">League Table</a>
-            <a href="match_schedule.html">Matches</a>
-            <a href="contact.html">Contact</a>
-            <a href="sponsors.html">Sponsors</a>
-            <a href="news.html">News</a>
-        </nav>
-    </header>
-
-    <main class="flex-1 flex flex-col items-center py-10 px-4">
-        <div class="flex flex-col items-center bg-navy p-6 rounded-lg border border-gold max-w-4xl w-full">
-            <h2 class="text-gold text-2xl font-bold mb-4">Match Schedule</h2>
-            <div class="mb-4">
-                <button onclick="filterMatches('All')" class="bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-2 rounded m-1">All</button>
-                <button onclick="filterMatches('Home')" class="bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-2 rounded m-1">Home</button>
-                <button onclick="filterMatches('Away')" class="bg-yellow-500 hover:bg-yellow-400 text-black px-4 py-2 rounded m-1">Away</button>
-            </div>
-            <table class="table-auto w-full text-center border border-gold">
-                <thead>
-                    <tr class="bg-yellow-500 text-black">
-                        <th class="px-4 py-2">Date</th>
-                        <th class="px-4 py-2">Fixture</th>
-                        <th class="px-4 py-2">Type</th>
-                    </tr>
-                </thead>
-                <tbody id="matchTable">
-                    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">28th September </td>
-        <td class="border px-4 py-2">Tonyrefail Tigers Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">28th September </td>
-        <td class="border px-4 py-2">Vikings  Vs ABC Gwent 2</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">5th October </td>
-        <td class="border px-4 py-2">Beddau Kinghts 2 Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">12th October</td>
-        <td class="border px-4 py-2">Vikings Vs RCT Gladiators 2</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">19th October</td>
-        <td class="border px-4 py-2">Major Merlin's Vs  Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">26th October </td>
-        <td class="border px-4 py-2">Vikings Vs Pontypridd Panthers</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">2nd November</td>
-        <td class="border px-4 py-2">Ely Titans Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">9th November </td>
-        <td class="border px-4 py-2">Vikings Vs Caerphilly Cobars 2</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">16th November</td>
-        <td class="border px-4 py-2">Merthyr Mustangs Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">23rd November </td>
-        <td class="border px-4 py-2">Ebbw Vale Vikings Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">23rd November </td>
-        <td class="border px-4 py-2">Vikings Vs Cardiff Eagles 2</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">30th November </td>
-        <td class="border px-4 py-2">Vikings Vs Tonyrefail Tigers</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">30th November </td>
-        <td class="border px-4 py-2">ABC Gwent 2 Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">7th December </td>
-        <td class="border px-4 py-2">Vikings Vs Beddau Kinghts 2</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">14th December </td>
-        <td class="border px-4 py-2">RCT Gladiators 2 Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">21st December </td>
-        <td class="border px-4 py-2">Vikings Vs Major Merlin's</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">28th December </td>
-        <td class="border px-4 py-2">Vikings Vs Ely Titans</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">28th December </td>
-        <td class="border px-4 py-2">Pontypridd Panthers Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">11th January </td>
-        <td class="border px-4 py-2">Caerphilly Cobars 2 Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">18th January </td>
-        <td class="border px-4 py-2">Vikings Vs Merthyr Mustangs</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Away">
-        <td class="border px-4 py-2">18th January </td>
-        <td class="border px-4 py-2">Cardiff Eagles 2 Vs Vikings</td>
-        <td class="border px-4 py-2">Away</td>
-    </tr>
-    
-    <tr class="match-row" data-type="Home">
-        <td class="border px-4 py-2">25th January </td>
-        <td class="border px-4 py-2">Vikings Vs Ebbw Vale Vikings</td>
-        <td class="border px-4 py-2">Home</td>
-    </tr>
-    
-                </tbody>
-            </table>
-        </div>
-    </main>
-
-    <footer class="highlight text-center text-black py-6">
-        <p class="font-bold">Follow Us on Social Media</p>
-        <div class="flex justify-center mt-2 space-x-4">
-            <a href="#"><img src="assets/images/facebook.png" alt="Facebook" class="h-6"/></a>
-            <a href="#"><img src="assets/images/x.png" alt="Twitter/X" class="h-6"/></a>
-            <a href="#"><img src="assets/images/instagram.png" alt="Instagram" class="h-6"/></a>
-            <a href="#"><img src="assets/images/youtube.png" alt="YouTube" class="h-6"/></a>
-            <a href="#"><img src="assets/images/tiktok.png" alt="TikTok" class="h-6"/></a>
-        </div>
-        <p class="mt-2 text-sm">© 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function filterMatches(type) {
-            const rows = document.querySelectorAll('.match-row');
-            rows.forEach(row => {
-                if (type === 'All' || row.dataset.type === type) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
+<body class="bg-black text-white font-sans min-h-screen flex flex-col relative overflow-x-hidden justify-between" x-data="{ open: false }">
+<!-- Overlay -->
+<div @click="open = false" class="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden" x-show="open" x-transition.opacity=""></div>
+<!-- Slide-in Left Mobile Nav -->
+<aside class="fixed top-0 left-0 w-64 h-full bg-black text-sky-400 p-6 z-30 md:hidden shadow-lg" x-show="open" x-transition:enter="transition transform duration-300" x-transition:enter-end="translate-x-0" x-transition:enter-start="-translate-x-full" x-transition:leave="transition transform duration-300" x-transition:leave-end="-translate-x-full" x-transition:leave-start="translate-x-0">
+<button @click="open = false" class="mb-6 text-right w-full text-sky-400 text-xl font-bold">
+    ✕
+  </button>
+<nav class="flex flex-col gap-4 text-lg font-semibold">
+<a @click="open = false" class="hover:underline" href="index.html">Home</a>
+<a @click="open = false" class="hover:underline" href="about.html">About</a>
+<a @click="open = false" class="hover:underline" href="team.html">Team</a>
+<a @click="open = false" class="hover:underline" href="schedule.html">Training</a>
+<a @click="open = false" class="hover:underline" href="league-table.html">League Table</a>
+<a @click="open = false" class="hover:underline" href="match_schedule.html">Matches</a>
+<a @click="open = false" class="hover:underline" href="contact.html">Contact</a>
+<a @click="open = false" class="hover:underline" href="sponsors.html">Sponsors</a>
+<a @click="open = false" class="hover:underline" href="news.html">News</a>
+</nav>
+</aside>
+<header class="bg-yellow-500 text-black p-4 flex justify-between items-center z-30 relative">
+<div class="flex items-center justify-between w-full md:w-auto space-x-4">
+<button @click="open = true" class="md:hidden focus:outline-none">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<div class="flex items-center space-x-4">
+<img alt="Cardiff Vikings Logo" class="h-12 w-12 object-contain" src="assets/images/logo.jpg"/>
+<h1 class="text-2xl font-bold">Cardiff Vikings</h1>
+</div>
+</div>
+<nav class="hidden md:flex space-x-4 text-sm md:text-base">
+<a class="hover:underline" href="index.html">Home</a>
+<a class="hover:underline" href="about.html">About</a>
+<a class="hover:underline" href="team.html">Team</a>
+<a class="hover:underline" href="schedule.html">Training</a>
+<a class="hover:underline" href="league-table.html">League Table</a>
+<a class="hover:underline" href="match_schedule.html">Matches</a>
+<a class="hover:underline" href="contact.html">Contact</a>
+<a class="hover:underline" href="sponsors.html">Sponsors</a>
+<a class="hover:underline" href="news.html">News</a>
+</nav>
+</header>
+<section class="max-w-4xl mx-auto bg-gray-900 border-2 border-sky-400 rounded-xl shadow-lg p-6 text-center mb-10 mt-10">
+<h2 class="text-xl font-bold mb-2">Match Schedule</h2>
+<div class="mt-6" id="upcomingGamesContainer"><h3 class="text-lg font-semibold mb-2">2025/26 Fixture List</h3><ul class="space-y-2"><li>28th September  - Tonyrefail Tigers Vs Vikings (Away)</li><li>28th September  - Vikings  Vs ABC Gwent 2 (Home)</li><li>5th October  - Beddau Kinghts 2 Vs Vikings (Away)</li><li>12th October - Vikings Vs RCT Gladiators 2 (Home)</li><li>19th October - Major Merlin's Vs  Vikings (Away)</li><li>26th October  - Vikings Vs Pontypridd Panthers (Home)</li><li>2nd November - Ely Titans Vs Vikings (Away)</li><li>9th November  - Vikings Vs Caerphilly Cobars 2 (Home)</li><li>16th November - Merthyr Mustangs Vs Vikings (Away)</li><li>23rd November  - Ebbw Vale Vikings Vs Vikings (Away)</li><li>23rd November  - Vikings Vs Cardiff Eagles 2 (Home)</li><li>30th November  - Vikings Vs Tonyrefail Tigers (Home)</li><li>30th November  - ABC Gwent 2 Vs Vikings  (Away)</li><li>7th December  - Vikings Vs Beddau Kinghts 2 (Home)</li><li>14th December  - RCT Gladiators 2 Vs Vikings (Away)</li><li>21st December  - Vikings Vs Major Merlin's (Home)</li><li>28th December  - Vikings Vs Ely Titans (Home)</li><li>28th December  - Pontypridd Panthers Vs Vikings (Away)</li><li>11th January  - Caerphilly Cobars 2 Vs Vikings (Away)</li><li>18th January  - Vikings Vs Merthyr Mustangs (Home)</li><li>18th January  - Cardiff Eagles 2 Vs Vikings (Away)</li><li>25th January  - Vikings Vs Ebbw Vale Vikings (Home)</li></ul></div>
+<script>
+  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTe0jfYrTl_cfqVt812QFYvCu2ZeZ9XXepyX-K3wchDf-GILqODcBHATiA0P5ROzKb3lPM4p3Maf4VX/pub?output=csv')
+    .then(response => response.text())
+    .then(csv => {
+      const rows = csv.split('\n').slice(1);
+      const today = new Date();
+      let html = '<h3 class="text-lg font-semibold mb-2">Upcoming Games</h3><ul class="space-y-1">';
+      rows.forEach(row => {
+        const cols = row.split(',');
+        const matchDate = new Date(cols[0]);
+        if (matchDate >= today) {
+          html += `<li>${cols[0]} - ${cols[1]} vs ${cols[3]}</li>`;
         }
-    </script>
+      });
+      html += '</ul>';
+      document.getElementById('upcomingGamesContainer').innerHTML = html;
+    });
+</script>
+</section>
+<footer class="text-center py-6 border-t border-yellow-500 mt-10">
+<h2 class="text-xl font-semibold mb-4">Follow Us on Social Media</h2>
+<div class="flex justify-center items-center gap-6">
+<a href="https://www.facebook.com/groups/1791205021357650" target="_blank">
+<img alt="Facebook" class="h-8 hover:scale-110 transition-transform duration-200" src="assets/images/facebook-icon.png"/>
+</a>
+<a href="https://x.com/CardiffVikings" target="_blank">
+<img alt="Twitter" class="h-8 hover:scale-110 transition-transform duration-200" src="assets/images/twitter-icon.png"/>
+</a>
+<a href="https://www.instagram.com/cardiffvikings?igsh=MTBjMHQxZWFidXlvdA==" target="_blank">
+<img alt="Instagram" class="h-8 hover:scale-110 transition-transform duration-200" src="assets/images/instagram-icon.png"/>
+</a>
+<a href="https://www.youtube.com/channel/UCLTMI8WLAnGnsk7J-Akcr3Q" target="_blank">
+<img alt="YouTube" class="h-8 hover:scale-110 transition-transform duration-200" src="assets/images/youtube-icon.png"/>
+</a>
+<a href="https://www.tiktok.com/@cardiffvikings?lang=en" target="_blank">
+<img alt="TikTok" class="h-8 hover:scale-110 transition-transform duration-200" src="assets/images/tiktok-icon.png"/>
+</a>
+</div>
+<p class="mt-6 text-sm">© 2025 Cardiff Vikings Basketball Team. All rights reserved.</p>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>
