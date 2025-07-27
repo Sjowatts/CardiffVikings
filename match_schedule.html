@@ -58,24 +58,6 @@
 <section class="max-w-4xl mx-auto bg-gray-900 border-2 border-sky-400 rounded-xl shadow-lg p-6 text-center mb-10 mt-10">
 <h2 class="text-xl font-bold mb-2">Match Schedule</h2>
 <div class="mt-6" id="upcomingGamesContainer"><h3 class="text-lg font-semibold mb-2">2025/26 Fixture List</h3><ul class="space-y-2"><li>28th September  - Tonyrefail Tigers Vs Vikings (Away)</li><li>28th September  - Vikings  Vs ABC Gwent 2 (Home)</li><li>5th October  - Beddau Kinghts 2 Vs Vikings (Away)</li><li>12th October - Vikings Vs RCT Gladiators 2 (Home)</li><li>19th October - Major Merlin's Vs  Vikings (Away)</li><li>26th October  - Vikings Vs Pontypridd Panthers (Home)</li><li>2nd November - Ely Titans Vs Vikings (Away)</li><li>9th November  - Vikings Vs Caerphilly Cobars 2 (Home)</li><li>16th November - Merthyr Mustangs Vs Vikings (Away)</li><li>23rd November  - Ebbw Vale Vikings Vs Vikings (Away)</li><li>23rd November  - Vikings Vs Cardiff Eagles 2 (Home)</li><li>30th November  - Vikings Vs Tonyrefail Tigers (Home)</li><li>30th November  - ABC Gwent 2 Vs Vikings  (Away)</li><li>7th December  - Vikings Vs Beddau Kinghts 2 (Home)</li><li>14th December  - RCT Gladiators 2 Vs Vikings (Away)</li><li>21st December  - Vikings Vs Major Merlin's (Home)</li><li>28th December  - Vikings Vs Ely Titans (Home)</li><li>28th December  - Pontypridd Panthers Vs Vikings (Away)</li><li>11th January  - Caerphilly Cobars 2 Vs Vikings (Away)</li><li>18th January  - Vikings Vs Merthyr Mustangs (Home)</li><li>18th January  - Cardiff Eagles 2 Vs Vikings (Away)</li><li>25th January  - Vikings Vs Ebbw Vale Vikings (Home)</li></ul></div>
-<script>
-  fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTe0jfYrTl_cfqVt812QFYvCu2ZeZ9XXepyX-K3wchDf-GILqODcBHATiA0P5ROzKb3lPM4p3Maf4VX/pub?output=csv')
-    .then(response => response.text())
-    .then(csv => {
-      const rows = csv.split('\n').slice(1);
-      const today = new Date();
-      let html = '<h3 class="text-lg font-semibold mb-2">Upcoming Games</h3><ul class="space-y-1">';
-      rows.forEach(row => {
-        const cols = row.split(',');
-        const matchDate = new Date(cols[0]);
-        if (matchDate >= today) {
-          html += `<li>${cols[0]} - ${cols[1]} vs ${cols[3]}</li>`;
-        }
-      });
-      html += '</ul>';
-      document.getElementById('upcomingGamesContainer').innerHTML = html;
-    });
-</script>
 </section>
 <footer class="text-center py-6 border-t border-sky-500 mt-10">
 <h2 class="text-xl font-semibold mb-4">Follow Us on Social Media</h2>
